@@ -4,7 +4,7 @@ Tags: ai, editorial, block-editor, notes, writing
 Requires at least: 7.0
 Tested up to: 7.2
 Requires PHP: 8.1
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,25 @@ Deactivating keeps everything. Deleting the plugin from the Plugins screen remov
 
 == Changelog ==
 
+= 1.1.0 =
+* Ask Fresh Eyes about a selection by mentioning `@fresh-eyes` in a note, or pick Fresh Eyes from the Notes `@` menu. New AI notes are written as a hidden Fresh Eyes user with its own avatar.
+* Reply "make that change" to an AI note to have the edit made, or reply to refine a suggested edit before applying it.
+* Structural suggestions: the AI can propose adding, removing and moving blocks, with each move recorded once and rejected in a single update in Suggest intent.
+* A reply's edit is kept as a suggestion on the thread's root note, so it can be accepted or rejected in Suggestion Mode.
+* New Grammar & Spelling focus area, with Accept all.
+* Design feedback offers one-click formatting fixes.
+* Reader personas: have a review read the post as a particular audience.
+* Show what's working: reviews now point out strengths and track progress on earlier feedback.
+* House style: corrections from note threads are remembered, and rules can be suggested from your published posts.
+* Alt text proposals work with any model that can read images. A site-wide "Send images to the AI provider" setting controls whether images are sent, and images a provider would refuse are left out on their own.
+* Every AI request is pinned to the chosen provider and model, so core never switches models quietly.
+* Claude Opus 5.5 replaces Claude Opus 4 in the built-in model list. A saved Opus 4 default falls back to the default model.
+* Reviews send each block's current text, not the text it was loaded with.
+* Edits keep source newlines, line breaks, footnotes and backslashes intact.
+* Threads number their edits by order, so two edits saved at once don't share a revision.
+* Deleting the plugin removes its settings and personal data and keeps your notes.
+* Marked compatible with WordPress 7.2.
+
 = 1.0.3 =
 * Renamed the plugin to Fresh Eyes: AI Editorial Feedback. The text domain is now `fresh-eyes`.
 * The notes and settings REST routes now require per-post and administrator capabilities.
@@ -149,6 +168,9 @@ Deactivating keeps everything. Deleting the plugin from the Plugins screen remov
 * Review button with loading states.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Ask Fresh Eyes in a note with @fresh-eyes, structural and grammar suggestions, reader personas, strengths and house style rules from your posts. If you picked Claude Opus 4 as the default model, reviews now use the default model instead.
 
 = 1.0.3 =
 Copydesk AI is now Fresh Eyes. The plugin now installs to a `fresh-eyes` folder, so if you installed Copydesk AI from GitHub, deactivate and delete that copy before activating this one. Existing notes, settings and history carry over.
